@@ -227,8 +227,8 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
 
 #### FUNÇÃO EXECUTAR TODAS
 
- function executarTodasHistorias() {
-    console.log('=== SIMULADOR TÉLOS - RESULTADOS COMPLETOS ===\n');
+    function executarTodasHistorias() {
+       console.log('=== SIMULADOR TÉLOS - RESULTADOS COMPLETOS ===\n');
     
     historia1();
     historia2();
@@ -237,8 +237,11 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
     const transacoesInvalidas = historia5();
     const dadosValidos = historia6();
     
-    console.log('=== SIMULAÇÃO CONCLUÍDA ===');
-}
+    console.log('=== SIMULAÇÃO CONCLUÍDA ===');}
+  
+
+
+
 
 #### O que faz:
 
