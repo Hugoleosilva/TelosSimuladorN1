@@ -2,18 +2,17 @@
 
 #### EXPLICAÇÃO DETALHADA DO CÓDIGO EM JAVASCRIPT
 
-- const dadosRepasse = [ 
-    
-- array de objetos ex:
+    - array de objetos ex:
 
- {
-
-    "orgao": "Polícia Civil", 
-    "data": "01/01/2024", 
-    "valor": 5500.00, 
-    "status": "sucesso" 
-
- }];
+      const dadosRepasse = [ 
+      
+      {
+        "orgao": "Polícia Civil", 
+        "data": "01/01/2024", 
+        "valor": 5500.00, 
+        "status": "sucesso" 
+      }
+      ]
 
 - const: Define uma constante (não pode ser reatribuída).
 
@@ -227,8 +226,8 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
 
 #### FUNÇÃO EXECUTAR TODAS
 
- function executarTodasHistorias() {
-    console.log('=== SIMULADOR TÉLOS - RESULTADOS COMPLETOS ===\n');
+    function executarTodasHistorias() {
+       console.log('=== SIMULADOR TÉLOS - RESULTADOS COMPLETOS ===\n');
     
     historia1();
     historia2();
@@ -237,8 +236,11 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
     const transacoesInvalidas = historia5();
     const dadosValidos = historia6();
     
-    console.log('=== SIMULAÇÃO CONCLUÍDA ===');
-}
+    console.log('=== SIMULAÇÃO CONCLUÍDA ===');}
+  
+
+
+
 
 #### O que faz:
 
