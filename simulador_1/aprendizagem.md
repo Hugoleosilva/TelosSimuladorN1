@@ -6,14 +6,14 @@
     
 - array de objetos ex:
 
- {
+      {
 
-    "orgao": "Polícia Civil", 
-    "data": "01/01/2024", 
-    "valor": 5500.00, 
-    "status": "sucesso" 
+      "orgao": "Polícia Civil", 
+      "data": "01/01/2024", 
+      "valor": 5500.00, 
+      "status": "sucesso" 
 
- }];
+       }];
 
 - const: Define uma constante (não pode ser reatribuída).
 
