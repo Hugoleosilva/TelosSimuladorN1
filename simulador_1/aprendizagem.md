@@ -34,11 +34,16 @@
 
 #### FUNÇÃO historia1() - TOTAL DE REPASSES
 
-function historia1() {
-    console.log('HISTÓRIA DE USUÁRIO 1');
-    console.log(`Total de repasses processados: ${dadosRepasse.length}`);
-    console.log('');
-}
+     function historia1() {
+
+       console.log('HISTÓRIA DE USUÁRIO 1');
+
+       console.log(`Total de repasses processados: 
+       ${dadosRepasse.length}`);
+
+       console.log('');
+
+     }
 
 #### O que faz:
 
@@ -52,11 +57,17 @@ function historia1() {
 
 #### FUNÇÃO historia2() - ANÁLISE POR STATUS
 
-function historia2() {
-    - FILTRANDO OS DADOS
+       FILTRANDO OS DADOS
 
-    const repassesSucesso = dadosRepasse.filter(r => r.status === 'sucesso');
-    const repassesFalha = dadosRepasse.filter(r => r.status === 'falha')};
+       function historia2() {
+      
+       const repassesSucesso = dadosRepasse.filter(r => 
+       r.status === 'sucesso');
+
+       const repassesFalha = dadosRepasse.filter(r => 
+       r.status === 'falha')
+       
+       };
 
 #### O que faz:
 
@@ -76,12 +87,17 @@ function historia2() {
 
 #### ANÁLISE DOS REPASSES BEM-SUCEDIDOS
 
-    - QUANTIDADE POR ÓRGÃO (SUCESSO)
+         QUANTIDADE POR ÓRGÃO (SUCESSO)
 
-    const quantidadePorOrgaoSucesso = {};
-    repassesSucesso.forEach(r => {
-        quantidadePorOrgaoSucesso[r.orgao] = (quantidadePorOrgaoSucesso[r.orgao] || 0) + 1;
-    });
+         const quantidadePorOrgaoSucesso = {};
+
+         repassesSucesso.forEach(r => {
+
+         quantidadePorOrgaoSucesso[r.orgao] = 
+         
+         (quantidadePorOrgaoSucesso[r.orgao] || 0) + 1;
+
+         });
 
 #### O que faz:
 
@@ -99,9 +115,10 @@ quantidadePorOrgaoSucesso[r.orgao] || 0: Se não existir, usa 0 (evita undefined
 
 #### CÁLCULO DE VALORES
 
-    - VALOR TOTAL (SUCESSO).
+    VALOR TOTAL (SUCESSO)
 
     const valorTotalSucesso = repassesSucesso.reduce((acc, r) => acc + r.valor, 0);
+
 
 #### O que faz:
 
@@ -123,9 +140,10 @@ quantidadePorOrgaoSucesso[r.orgao] || 0: Se não existir, usa 0 (evita undefined
 
 #### FUNÇÃO historia3() - ESTATÍSTICAS GERAIS
 
-    - MAIOR E MENOR VALOR
+    MAIOR E MENOR VALOR
 
     const repasseMaiorValor = dadosRepasse.reduce((max, r) => r.valor > max.valor ? r : max, dadosRepasse[0]);
+
 
 #### O que faz:
 - Encontra o repasse com maior valor.
@@ -145,12 +163,15 @@ quantidadePorOrgaoSucesso[r.orgao] || 0: Se não existir, usa 0 (evita undefined
 
 #### CONTAGEM POR DATA E ÓRGÃO
 
-    - DIA COM MAIS REPASSES
+     DIA COM MAIS REPASSES
 
-    const repassesPorData = {};
-    dadosRepasse.forEach(r => {
-        repassesPorData[r.data] = (repassesPorData[r.data] || 0) + 1;
-    });
+     const repassesPorData = {};
+
+     dadosRepasse.forEach(r => {
+
+     repassesPorData[r.data] = (repassesPorData[r.data] || 0) + 1;
+
+     });
 
 #### O que faz:
 
@@ -161,8 +182,11 @@ quantidadePorOrgaoSucesso[r.orgao] || 0: Se não existir, usa 0 (evita undefined
 #### FUNÇÃO historia4() - BUSCA POR ÓRGÃO
 
      function historia4(orgaoBuscado = 'Polícia Civil') {
+
         const repassesOrgao = dadosRepasse.filter(r => 
+
         r.orgao.toLowerCase().includes(orgaoBuscado.toLowerCase())
+     
      )};
 
 #### O que faz:
@@ -183,8 +207,11 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
 #### FUNÇÃO historia5() - TRATAMENTO DE ERROS
 
      function historia5() {
+
         const transacoesInvalidas = dadosRepasse.filter(r => 
+        
         r.status === 'falha' && (!r.motivo || r.motivo.trim() === '')
+     
      )};
 
 #### O que faz:
@@ -204,6 +231,7 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
 #### FUNÇÃO historia6() - AJUSTES NAS ESTATÍSTICAS
 
      function historia6() {
+
         const transacoesInvalidas = dadosRepasse.filter(r => 
         r.status === 'falha' && (!r.motivo || r.motivo.trim() === '')
      )};
@@ -227,7 +255,8 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
 #### FUNÇÃO EXECUTAR TODAS
 
     function executarTodasHistorias() {
-       console.log('=== SIMULADOR TÉLOS - RESULTADOS COMPLETOS ===\n');
+
+       console.log('=== SIMULADOR TÉLOS - RESULTADOS COMPLETOS ===');
     
     historia1();
     historia2();
@@ -236,7 +265,9 @@ orgaoBuscado = 'Polícia Civil': Parâmetro com valor padrão.
     const transacoesInvalidas = historia5();
     const dadosValidos = historia6();
     
-    console.log('=== SIMULAÇÃO CONCLUÍDA ===');}
+    console.log('=== SIMULAÇÃO CONCLUÍDA ===');
+    
+    }
   
 
 
